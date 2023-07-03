@@ -1,10 +1,10 @@
 import vuetify from "vite-plugin-vuetify";
 
 // PWA Config
-const title = "Vuetify 3 + Nuxt 3 Starter";
-const shortTitle = "Vuetify 3 + Nuxt 3 Starter";
+const title = "Fakeflix - Movies database";
+const shortTitle = "Fakeflix";
 const description =
-  "Template to get you up and running with Nuxt 3 & Vuetify 3";
+  "A simple films database using IMDb database";
 const image = "https://vuetify3nuxt3starter.behonbaker.com/starter.png";
 const url = "https://vuetify3nuxt3starter.behonbaker.com/";
 
@@ -13,7 +13,6 @@ export default defineNuxtConfig({
   // import styles
   css: ["@/assets/main.scss"],
   // enable takeover mode
-  typescript: { shim: false },
   build: { transpile: ["vuetify"] },
   modules: [
     "@kevinmarrec/nuxt-pwa",
@@ -23,7 +22,10 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify())
       );
     },
+    "@nuxtjs/supabase"
   ],
+
+  srcDir: "src",
 
   app: {
     head: {
@@ -97,7 +99,7 @@ export default defineNuxtConfig({
   pwa: {
     meta: {
       name: shortTitle,
-      author: "Behon Baker",
+      author: "Lucneonct",
       theme_color: "#4f46e5",
       description: description,
     },
