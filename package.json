@@ -15,6 +15,7 @@
     "@nuxtjs/supabase": "^0.3.7",
     "nuxt": "^3.6.1",
     "sass": "^1.62.0",
+    "vitest": "^0.32.4",
     "vuetify": "^3.1.15"
   },
   "dependencies": {

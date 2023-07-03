@@ -93,7 +93,7 @@ export default defineNuxtConfig({
           content: image,
         },
       ],
-    },
+    }
   },
 
   pwa: {
@@ -110,4 +110,8 @@ export default defineNuxtConfig({
       description: description,
     },
   },
+
+  experimental: {
+    viewTransition: true
+  }
 });

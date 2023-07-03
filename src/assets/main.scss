@@ -106,3 +106,78 @@ a {
     ) !important;
   }
 }
+
+@keyframes grow-x {
+  0% {    
+    border-opacity: 0;
+  }
+  10% {
+    transform: rotate3d(0, 1, 0, 0);
+    border-opacity: 1;
+    background-color: rgba($color: #fff, $alpha: 0.1);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 90deg);
+    background-color: rgba($color: #fff, $alpha: 0.2);
+  }
+  90% {
+    transform: rotate3d(0, 1, 0, 90deg);
+    background-color: rgba($color: #fff, $alpha: 0.1);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 90deg);
+    background-color: rgba($color: #fff, $alpha: 0);
+    border-opacity: 1;
+  }
+}
+
+@keyframes shrink-x {
+  0% {
+    transform: rotate3d(0, 1, 0, 90deg);
+    border-opacity: 1;
+  }
+  10% {
+    background-color: rgba($color: #fff, $alpha: 0.1);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 90deg);
+    background-color: rgba($color: #fff, $alpha: 0.2);
+  }
+  90% {
+    transform: rotate3d(0, 1, 0, 0);
+    background-color: rgba($color: #fff, $alpha: 0.1);
+  }
+  100% {
+    background-color: rgba($color: #fff, $alpha: 0);
+    border-opacity: 1;
+  }
+}
+
+::view-transition-old(form-animation) {
+  perspective: 50em;
+  animation-duration: 0.25s;
+  animation-name: grow-x;
+  animation-timing-function: ease-out;
+}
+::view-transition-new(form-animation) {
+  perspective: 50em;
+  animation-duration: 0.25s;
+  animation-name: shrink-x;
+  animation-timing-function: ease-in;
+}
+
+.background-image {
+  height: 100%;
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    content: "";
+    background-image: url("./background.webp");
+    background-size: cover;
+    background-position: center;
+  }
+}
