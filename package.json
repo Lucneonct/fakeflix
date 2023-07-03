@@ -6,13 +6,20 @@
     "generate": "nuxt generate",
     "reset": "rm -rf .nuxt node_modules .output package-lock.json && npm install",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@iconify/vue": "^4.1.1",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
+    "@nuxt/test-utils": "^3.6.1",
     "@nuxtjs/google-fonts": "^3.0.0",
     "@nuxtjs/supabase": "^0.3.7",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitest/coverage-v8": "^0.32.4",
+    "@vue/test-utils": "^2.4.0",
+    "happy-dom": "^9.20.3",
     "nuxt": "^3.6.1",
     "sass": "^1.62.0",
     "vitest": "^0.32.4",
