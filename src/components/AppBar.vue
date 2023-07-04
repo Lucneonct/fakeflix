@@ -8,10 +8,6 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn icon>
-      <v-icon>mdi-magnify</v-icon>
-    </v-btn>
-
     <v-menu offset="5" :contained="true" transition="slide-y-transition" location="start" internal-activator :close-on-content-click="false">
       <template #activator="{ props }">
         <v-btn icon v-bind="props" class="mr-2">
