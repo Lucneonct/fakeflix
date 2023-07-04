@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<VApp>
+			<AppBar />
 			<VMain>
 				<slot />
 			</VMain>

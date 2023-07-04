@@ -46,9 +46,9 @@ a {
     color: white;
     background: linear-gradient(
       318deg,
-      rgba(67, 56, 202, 1) 12%,
-      rgba(79, 70, 229, 1) 38%,
-      rgba(99, 102, 241, 1) 100%
+      rgb(202, 56, 56) 12%,
+      rgb(229, 70, 70) 38%,
+      rgb(241, 99, 99) 100%
     ) !important;
   }
   &.cancel {
@@ -177,7 +177,8 @@ a {
     position: fixed;
     content: "";
     background-image: url("./background.webp");
+    opacity: 0.8;
     background-size: cover;
-    background-position: center;
+    background-position: right;
   }
 }

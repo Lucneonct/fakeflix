@@ -16,6 +16,7 @@ export default defineNuxtConfig({
   build: { transpile: ["vuetify"] },
   modules: [
     "@kevinmarrec/nuxt-pwa",
+    "@pinia/nuxt",
     async (options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) =>
         // @ts-ignore
@@ -27,10 +28,16 @@ export default defineNuxtConfig({
 
   srcDir: "src",
 
+  pinia: {
+    autoImports: [
+      'defineStore'
+    ]
+  },
+
   app: {
     head: {
-      title: "Vuetify 3 + Nuxt 3 Starter",
-      titleTemplate: "%s | Vuetify 3 + Nuxt 3 Starter",
+      title,
+      titleTemplate: "%s | Fakeflix",
       link: [
         { rel: "stylesheet", href: "https://rsms.me/inter/inter.css" },
         { rel: "preconnect", href: "https://rsms.me/" },
