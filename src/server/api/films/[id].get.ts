@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
   /**
    * Verify the correct ID to prevent invalid fetchings
    */
-  if(id?.length !== 9) {
+  if(id && id.length < 5) {
     throw createError({
       statusCode: 400,
       statusMessage: "invalid id",

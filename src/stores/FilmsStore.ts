@@ -1,6 +1,4 @@
-import { defineStore } from "pinia";
-
-export const useFilmsStore = defineStore('test', {
+export const useFilmsStore = defineStore('films', {
   state: () => ({
     message: 'hello'
   })
