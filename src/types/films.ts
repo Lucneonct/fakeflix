@@ -11,5 +11,6 @@ export enum EAvailableDetailItemKeys {
   "Writer",
   "Actors",
   "Language",
-  "Country"
+  "Country",
+  "totalSeasons"
 }

@@ -6,7 +6,7 @@
     <v-row>
       <v-col cols="12" md="4" xl="3">
         <!-- HEADER IMAGE  -->
-        <v-card class="pa-2 mx-16 mx-md-auto" variant="outlined" elevation="4">
+        <v-card class="pa-2 mx-16 mx-md-auto" variant="outlined" elevation="3">
           <v-img :src="media.Poster" />
         </v-card>
       </v-col>
@@ -19,8 +19,9 @@
             </div>
             <!-- YEAR  -->
             <v-row>
-              <v-col>
-                <div class="text-h6 text-grey text-thin">({{ media.Year }})</div>
+              <v-col class="d-flex">
+                <div class="text-body-1 text-grey text-thin">{{ media.Type.toUpperCase() }}</div>
+                <div class="text-body-1 ml-2 text-grey text-thin">({{ media.Year }})</div>
               </v-col>
               <v-col class="d-flex justify-end pa-0 px-0 align-center">
                 <IMDBRating :imdbID="media.imdbID" :value="media.imdbRating" compact />
@@ -56,7 +57,7 @@
                 />
                 <IMDBRating :imdbID="media.imdbID" :value="media.imdbRating" />
 
-                <div>
+                <div v-if="isEmpty(media.Ratings)">
                   <div class="text-heading-5 my-5">Others</div>
                   <detail-item
                     v-for="item in media.Ratings"
@@ -95,7 +96,7 @@ definePageMeta({
   },
 });
 
-import { isNull, isUndefined } from "lodash";
+import { isNull, isUndefined, isEmpty } from "lodash";
 import { TOMDBFullItemResponse } from "@/types/omdb";
 import { fetchFilmsById } from "../../services/films";
 import { getDetailsList } from "@/utils/films";

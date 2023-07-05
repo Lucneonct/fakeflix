@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="transparent" class="overflow-visible">
+  <v-app-bar class="overflow-visible">
     <template v-slot:prepend v-if="showBackButton">
       <nuxt-link to="/">
         <v-btn icon="mdi-arrow-left" />
