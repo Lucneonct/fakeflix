@@ -12,10 +12,11 @@ export const getDetailsList = (item: TOMDBFullItemResponse): IFilmItem[] => {
   let items: IFilmItem[] = [];
 
   Object.keys(item).forEach((key) => {
-    if(availableDetailItemKeys.includes(key as keyof EAvailableDetailItemKeys)) {
+    let actualKey = key as keyof typeof EAvailableDetailItemKeys;
+    if(availableDetailItemKeys.includes(actualKey)) {
       items.push({
         name: key,
-        value: item[key as keyof typeof EAvailableDetailItemKeys]
+        value: item[actualKey] || ""
       })
     }
   })

@@ -51,11 +51,11 @@ export interface IOBDMItemFull extends IOMDBItem {
     Metascore: string;
     imdbRating: string;
     imdbVotes: string;
-    totalSeasons: string;
+    totalSeasons?: string;
     BoxOffice?: string;
     DVD?: string;
     Website?: string;
-    totalSeasongs?: string;
+    Production?: string;
     Response: "True" | "False";
 }
 

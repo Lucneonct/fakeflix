@@ -5,8 +5,8 @@ const title = "Fakeflix - Movies database";
 const shortTitle = "Fakeflix";
 const description =
   "A simple films database using IMDb database";
-const image = "https://vuetify3nuxt3starter.behonbaker.com/starter.png";
-const url = "https://vuetify3nuxt3starter.behonbaker.com/";
+const image = "https://fakeflix-psi.vercel.app/";
+const url = "https://fakeflix-psi.vercel.app/preview.jpg";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({

@@ -45,6 +45,14 @@ Get params [HERE](https://supabase.com/dashboard/project/ftydkmhejnybwgfrfayf/se
 yarn run dev
 ```
 
+### Run essential tests
+1. Just run 
+```bash
+yarn test
+```
+
+_All components was made with component and type validation_
+
 ### Stuff used
 
 - NuxtJS
