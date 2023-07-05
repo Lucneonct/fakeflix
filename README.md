@@ -23,7 +23,7 @@ First of all, you must register on the following pages:
 1. Install the deps
 
 ```bash
-npm install
+yarn install
 ```
 
 2. Add the environment variables on `.env` file
@@ -42,7 +42,7 @@ Get params [HERE](https://supabase.com/dashboard/project/ftydkmhejnybwgfrfayf/se
 
 3. Run the app
 ```bash
-npm run dev
+yarn run dev
 ```
 
 ### Stuff used
