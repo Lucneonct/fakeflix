@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   // import styles
   css: ["@/assets/main.scss"],
   // enable takeover mode
-  build: { transpile: ["vuetify"] },
+  build: { transpile: ["vuetify", "lodash"] },
   modules: [
     "@kevinmarrec/nuxt-pwa",
     "@pinia/nuxt",
