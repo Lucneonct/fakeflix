@@ -108,7 +108,7 @@ a {
 }
 
 @keyframes grow-x {
-  0% {    
+  0% {
     border-opacity: 0;
   }
   10% {
@@ -181,4 +181,28 @@ a {
     background-size: cover;
     background-position: right;
   }
+}
+
+#backgound-poster {
+  filter: blur(5px);
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  position: absolute;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  div {
+    height: 100%;
+    content: "";
+    background: linear-gradient(0, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0) 62%);
+  }
+}
+
+#metascore-square {
+  background: rgb(var(--v-theme-primary));
+  padding: 4px;
+  border-radius: 4px;
 }

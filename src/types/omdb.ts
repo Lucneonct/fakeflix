@@ -8,7 +8,7 @@ export type TOMDBTypes = "movie" | "series" | "episode"
  */
 export interface IOMDBRating {
   Source: string;
-  value: string;
+  Value: string;
 }
 
 /**
@@ -52,18 +52,13 @@ export interface IOBDMItemFull extends IOMDBItem {
     imdbRating: string;
     imdbVotes: string;
     totalSeasons: string;
-    Response: "True" | "False"
-}
-
-/**
- * Response in case of there's an error
- */
-export interface IOMDBItemErrorFetch {
-  Response: "False";
-  Error: string;
+    BoxOffice?: string;
+    DVD?: string;
+    Website?: string;
+    Response: "True" | "False";
 }
 
 /**
  * Response of the full item
  */
-export type TOMDBFullItemResponse = IOBDMItemFull | IOMDBItemErrorFetch
+export type TOMDBFullItemResponse = IOBDMItemFull
