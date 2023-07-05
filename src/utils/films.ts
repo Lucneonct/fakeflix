@@ -21,3 +21,8 @@ export const getDetailsList = (item: TOMDBFullItemResponse): IFilmItem[] => {
   })
   return items;
 }
+
+export const calculateTotalPages = (count: number): number => {
+  if(count === 0) return 0;
+  return Math.ceil(count / 10);
+}

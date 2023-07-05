@@ -25,7 +25,7 @@
     "nuxt": "^3.6.1",
     "sass": "^1.62.0",
     "vitest": "^0.32.4",
-    "vuetify": "^3.1.15"
+    "vuetify": "^3.3.6"
   },
   "dependencies": {
     "axios": "^1.4.0",

@@ -23,7 +23,7 @@ export const DARK_THEME = "dark";
 export const dark: ThemeDefinition = {
   dark: true,
   colors: {
-    background: twColors.gray[950],
+    background: twColors.gray[900],
     surface: twColors.gray[900],
     primary: twColors.red[500],
     secondary: twColors.gray[50],

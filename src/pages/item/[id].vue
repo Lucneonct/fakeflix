@@ -7,7 +7,7 @@
       <v-col cols="12" md="4" xl="3">
         <!-- HEADER IMAGE  -->
         <v-card class="pa-2 mx-16 mx-md-auto" variant="outlined" elevation="3">
-          <v-img :src="media.Poster" />
+          <v-img :style="`view-transition-name: image-${media.imdbID}`" :src="getImage" />
         </v-card>
       </v-col>
       <v-col cols="12" md="8" xl="9" class="pl-0 mt-10 pl-md-10 pl-xl-20">
@@ -100,6 +100,7 @@ import { isNull, isUndefined, isEmpty } from "lodash";
 import { TOMDBFullItemResponse } from "@/types/omdb";
 import { fetchFilmsById } from "../../services/films";
 import { getDetailsList } from "@/utils/films";
+import fallbackImage from "@/assets/default.png";
 
 const route = useRoute();
 const media = ref<TOMDBFullItemResponse>();
@@ -114,6 +115,14 @@ const getDetailItems = computed(() => {
   }
 
   return [];
+});
+
+const getImage = computed(() => {
+  if(!isUndefined(media.value) && media.value.Poster !== "N/A") {
+    return media.value.Poster
+  }
+
+  return fallbackImage;
 });
 
 try {

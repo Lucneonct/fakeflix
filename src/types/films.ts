@@ -3,6 +3,10 @@ export interface IFilmItem {
   value: string;
 }
 
+export interface IFetchFilmsOptions {
+  page?: number;
+}
+
 export enum EAvailableDetailItemKeys {
   "Rated",
   "Released",
